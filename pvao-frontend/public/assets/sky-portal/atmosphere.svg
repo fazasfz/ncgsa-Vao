@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <!-- Star / Sun above cloud -->
+  <g transform="translate(34, 14) scale(0.75)">
+    <polygon points="0,-7 2.2,-2.2 7,0 2.2,2.2 0,7 -2.2,2.2 -7,0 -2.2,-2.2" fill="#E0A85E" />
+  </g>
+  <!-- Cloud shape -->
+  <path d="M 12 36 C 8 36 6 32 8 28 C 7 24 11 20 16 21 C 18 16 26 15 30 19 C 34 18 38 22 38 27 C 41 29 42 33 39 36 Z" fill="#E0A85E" opacity="0.9" />
+</svg>

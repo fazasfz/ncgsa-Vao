@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="#E0A85E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Top Left -->
+  <path d="M 8 18 L 8 8 L 18 8" />
+  <!-- Top Right -->
+  <path d="M 30 8 L 40 8 L 40 18" />
+  <!-- Bottom Left -->
+  <path d="M 8 30 L 8 40 L 18 40" />
+  <!-- Bottom Right -->
+  <path d="M 30 40 L 40 40 L 40 30" />
+</svg>

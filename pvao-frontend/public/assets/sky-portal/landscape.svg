@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <!-- Ground rectangle base -->
+  <rect x="6" y="28" width="36" height="12" rx="4" fill="#E0A85E" />
+  <!-- Left larger tree/hill circle -->
+  <circle cx="18" cy="20" r="7.5" fill="#E0A85E" />
+  <!-- Right smaller tree/hill circle -->
+  <circle cx="31" cy="22" r="5.5" fill="#E0A85E" />
+</svg>

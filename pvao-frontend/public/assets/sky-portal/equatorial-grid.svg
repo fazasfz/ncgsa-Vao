@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="#E0A85E" stroke-width="2.2">
+  <!-- Outer circle -->
+  <circle cx="24" cy="24" r="18" />
+  <!-- Equator & Central Meridian -->
+  <line x1="6" y1="24" x2="42" y2="24" />
+  <line x1="24" y1="6" x2="24" y2="42" />
+  <!-- Longitude Ellipses -->
+  <ellipse cx="24" cy="24" rx="9" ry="18" />
+  <!-- Latitude Lines -->
+  <path d="M 9.5 15 C 14 17 34 17 38.5 15" />
+  <path d="M 9.5 33 C 14 31 34 31 38.5 33" />
+</svg>

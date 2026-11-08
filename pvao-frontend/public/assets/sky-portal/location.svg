@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <!-- Location Pin -->
+  <path d="M 24 6 C 16 6 10 12 10 20 C 10 29 24 42 24 42 C 24 42 38 29 38 20 C 38 12 32 6 24 6 Z" fill="#E0A85E" />
+  <!-- Center circle cutout -->
+  <circle cx="24" cy="19" r="6" fill="#141414" />
+</svg>

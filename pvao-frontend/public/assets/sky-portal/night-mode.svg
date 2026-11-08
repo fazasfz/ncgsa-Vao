@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <!-- Eye silhouette -->
+  <path d="M 6 24 C 12 12 36 12 42 24 C 36 36 12 36 6 24 Z" fill="#E0A85E" />
+  <!-- Eye sclera cutout -->
+  <circle cx="24" cy="24" r="8" fill="#141414" />
+  <!-- Iris/Pupil dot -->
+  <circle cx="24" cy="24" r="4.5" fill="#E0A85E" />
+</svg>
