@@ -1,0 +1,29 @@
+.exploreSection {
+    width: 100%;
+}
+
+.exploreCard {
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.controlsRow {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+
+.listContainer {
+    width: 100%;
+    /* Ensure FeatureList expands fully instead of being cramped */
+}
+
+/* FeatureList was previously constrained by a sidebar. We might need to override its internal styles or ensure it spans correctly here. */
+.listContainer :global(.feature-list-container) {
+    width: 100%;
+    max-height: 500px; /* Optional: adjust as needed */
+}

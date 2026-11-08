@@ -1,0 +1,216 @@
+/* ChatMessage.module.css */
+.messageRow {
+  display: flex;
+  gap: 0.85rem;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.rowUser {
+  justify-content: flex-end;
+}
+
+.rowBot {
+  justify-content: flex-start;
+}
+
+/* AVATARS */
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.avatarBot {
+  background: rgba(20, 27, 40, 0.9);
+  border: 1px solid rgba(200, 137, 59, 0.45);
+  color: var(--brass, #c8893b);
+}
+
+.avatarUser {
+  background: rgba(27, 38, 59, 0.9);
+  border: 1px solid rgba(138, 143, 152, 0.35);
+  color: var(--starlight, #f4efe6);
+}
+
+/* BUBBLES */
+.bubble {
+  max-width: 78%;
+  padding: 1rem 1.25rem;
+  border-radius: 16px;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  box-sizing: border-box;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease;
+}
+
+@media (max-width: 768px) {
+  .bubble {
+    max-width: 88%;
+    padding: 0.85rem 1rem;
+    font-size: 0.88rem;
+  }
+}
+
+.bubbleUser {
+  background: linear-gradient(135deg, #1b263b 0%, #151c2a 100%);
+  border: 1px solid rgba(138, 143, 152, 0.28);
+  border-top-right-radius: 4px;
+  color: #ffffff;
+  margin-left: auto;
+}
+
+.bubbleBot {
+  background: rgba(14, 19, 28, 0.85);
+  border: 1px solid rgba(138, 143, 152, 0.2);
+  border-top-left-radius: 4px;
+  color: #e2e8f0;
+  backdrop-filter: blur(8px);
+}
+
+.bubbleError {
+  background: rgba(45, 15, 20, 0.85);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #fca5a5;
+  border-top-left-radius: 4px;
+}
+
+/* MARKDOWN STYLING */
+.markdownContent {
+  width: 100%;
+  font-family: var(--font-body, 'Inter', sans-serif);
+}
+
+.markdownContent p {
+  margin: 0 0 0.75rem 0;
+}
+
+.markdownContent p:last-child {
+  margin-bottom: 0;
+}
+
+.markdownContent h1,
+.markdownContent h2,
+.markdownContent h3,
+.markdownContent h4 {
+  color: #ffffff;
+  font-family: var(--font-headline, 'Inter', sans-serif);
+  margin: 0.85rem 0 0.4rem;
+  font-weight: 700;
+}
+
+.markdownContent h1 { font-size: 1.15rem; }
+.markdownContent h2 { font-size: 1.05rem; }
+.markdownContent h3 { font-size: 0.95rem; }
+
+.markdownContent ul,
+.markdownContent ol {
+  margin: 0 0 0.75rem 1.25rem;
+  padding: 0;
+}
+
+.markdownContent li {
+  margin-bottom: 0.35rem;
+}
+
+.markdownContent code {
+  background: rgba(26, 35, 51, 0.9);
+  color: var(--copper, #e0a85e);
+  font-family: var(--font-mono, monospace);
+  font-size: 0.85em;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  border: 1px solid rgba(138, 143, 152, 0.2);
+}
+
+.markdownContent pre {
+  background: #090c12;
+  border: 1px solid rgba(138, 143, 152, 0.2);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  overflow-x: auto;
+  margin: 0.75rem 0;
+}
+
+.markdownContent pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  color: #e2e8f0;
+  font-family: var(--font-mono, monospace);
+}
+
+.markdownContent a {
+  color: var(--brass, #c8893b);
+  text-decoration: underline;
+}
+
+.markdownContent a:hover {
+  color: var(--copper, #e0a85e);
+}
+
+/* KATEX DISPLAY MATH */
+.markdownContent :global(.katex-display) {
+  margin: 0.85rem 0;
+  padding: 0.75rem 1rem;
+  background: rgba(8, 11, 18, 0.75);
+  border: 1px solid rgba(200, 137, 59, 0.25);
+  border-radius: 8px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.markdownContent :global(.katex) {
+  font-size: 1.05em;
+  color: #f1f5f9;
+}
+
+/* STREAMING INDICATOR */
+.streamingIndicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #9ca3af;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.8rem;
+}
+
+.pulseDotSmall {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--brass, #c8893b);
+  animation: pulseSmall 1.5s infinite ease-in-out;
+}
+
+@keyframes pulseSmall {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.3; transform: scale(0.8); }
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  height: 14px;
+  background: var(--brass, #c8893b);
+  margin-left: 3px;
+  vertical-align: middle;
+  animation: cursorBlink 1s infinite;
+}
+
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}

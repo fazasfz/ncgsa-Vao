@@ -1,0 +1,89 @@
+/* ModulesOverviewSection.module.css - 6-column editorial grid */
+
+.modulesSection {
+  background-color: var(--obsidian-2, #0B0E14);
+  padding: 5rem 2rem;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+  margin-bottom: 3.5rem;
+  width: 100%;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  background: rgba(224, 168, 94, 0.1);
+  border: 1px solid rgba(224, 168, 94, 0.25);
+  color: var(--copper, #E0A85E);
+  font-family: var(--font-mono, monospace);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.heading {
+  font-family: var(--font-headline, 'Inter', sans-serif);
+  font-weight: 800;
+  font-size: 2.4rem;
+  color: var(--starlight, #F8FAFC);
+  letter-spacing: 0.08em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.subhead {
+  font-family: var(--font-headline, 'Inter', sans-serif);
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--slate-ui, #94A3B8);
+  margin: 0;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* 6-Column Card Row */
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .cardGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .cardGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem;
+  }
+  .heading {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 440px) {
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.locator {
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid rgba(243, 156, 18, 0.4);
+}
+
+.locatorImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.locatorDot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: var(--brass, #f39c12);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 8px #f39c12, 0 0 12px #f39c12;
+  z-index: 2;
+}
+
+.caption {
+  margin-top: 0.5rem;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.7rem;
+  color: #8a8a9a;
+  text-align: center;
+}

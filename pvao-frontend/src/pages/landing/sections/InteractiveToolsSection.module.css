@@ -1,0 +1,142 @@
+.toolsSection {
+  background-color: var(--obsidian-2);
+  padding: var(--space-64) 0;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--breakpoint-xl);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-48);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-16);
+}
+
+.heading {
+  font-family: var(--font-headline);
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: var(--starlight);
+  letter-spacing: 0.1em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.toolCard {
+  border-radius: 0;
+  overflow: hidden;
+  height: 400px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(138, 143, 152, 0.2);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.toolCard:hover {
+  transform: translateY(-4px);
+  border-color: var(--brass);
+}
+
+/* Solar System Simulator Styles */
+.simulatorCard {
+  background-image: url('../../../assets/images/modules/solar-system.jpg'); /* Space background */
+  background-size: cover;
+  background-position: center;
+}
+
+.cardOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(10, 11, 13, 0.9) 0%, rgba(10, 11, 13, 0) 100%);
+  pointer-events: none;
+}
+
+.cardContent {
+  position: relative;
+  z-index: 2;
+  padding: var(--space-32);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.toolBadge {
+  align-self: flex-start;
+  border-color: var(--copper);
+  color: var(--copper);
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+.toolTitle {
+  font-family: var(--font-headline);
+  font-size: 2rem;
+  color: var(--starlight);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.arrowIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: var(--brass);
+  border-radius: 50%;
+  color: var(--obsidian);
+  font-size: 0.75rem;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.toolCard:hover .arrowIcon {
+  transform: translateX(4px);
+}
+
+.toolDesc {
+  font-family: var(--font-body);
+  color: rgba(244, 239, 230, 0.85);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+
+
+/* Astro-Copilot Promotional Styles */
+.copilotCard {
+  background-image: url('../../../assets/images/modules/astro-ai.jpg');
+  background-color: var(--obsidian-1);
+  background-size: cover;
+  background-position: center;
+}
+
+.cardOverlayCopilot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(10, 11, 13, 0.9) 0%, rgba(10, 11, 13, 0) 100%);
+  pointer-events: none;
+}

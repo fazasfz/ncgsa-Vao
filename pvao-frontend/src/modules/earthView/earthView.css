@@ -1,0 +1,86 @@
+.earthview-page {
+  width: 100%;
+  height: 100%;
+  background: var(--obsidian-1);
+  font-family: var(--font-body);
+  position: relative;
+}
+
+.earthview-title-panel {
+  position: absolute;
+  top: var(--space-16);
+  left: var(--space-16);
+  z-index: 1000;
+  background: rgba(10, 11, 13, 0.75);
+  border: var(--hud-border-width) solid var(--hud-border-color);
+  padding: var(--space-12) var(--space-16);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.earthview-title {
+  font-family: var(--font-headline);
+  color: var(--starlight);
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.earthview-subtitle {
+  font-family: var(--font-mono);
+  color: var(--slate-ui);
+  font-size: 0.7rem;
+}
+
+.earthview-map-wrap {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.earthview-map {
+  width: 100%;
+  height: 100%;
+  background: var(--deep-teal);
+}
+
+.earthview-hud {
+  position: absolute;
+  z-index: 1000;
+  background: rgba(10, 11, 13, 0.75);
+  border: var(--hud-border-width) solid var(--hud-border-color);
+  font-family: var(--font-mono);
+  color: var(--starlight);
+  padding: var(--space-8) var(--space-12);
+}
+
+.earthview-hud--coords {
+  bottom: var(--space-16);
+  left: var(--space-16);
+  font-size: 0.75rem;
+  color: var(--copper);
+}
+
+.earthview-hud--info {
+  top: var(--space-16);
+  right: var(--space-16);
+  min-width: 180px;
+}
+
+.earthview-hud-label {
+  font-size: 0.65rem;
+  color: var(--slate-ui);
+  letter-spacing: 0.08em;
+}
+
+.earthview-hud-value {
+  font-size: 0.9rem;
+  color: var(--brass);
+  margin-top: var(--space-4);
+}
+
+.earthview-hud-coords {
+  font-size: 0.7rem;
+  color: var(--slate-ui);
+  margin-top: var(--space-4);
+}

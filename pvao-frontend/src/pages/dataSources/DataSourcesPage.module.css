@@ -1,0 +1,111 @@
+.dataSection {
+  background-color: var(--obsidian-1);
+  min-height: auto;
+  border-top: 1px solid var(--hud-border-color);
+  border-bottom: 1px solid var(--hud-border-color);
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin-bottom: var(--space-24);
+}
+
+.heading {
+  font-family: var(--font-headline);
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--starlight);
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+
+.contentRow {
+  width: 100%;
+  align-items: center;
+}
+
+.apodCard {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: var(--obsidian-2);
+  border: var(--hud-border-width) solid var(--hud-border-color);
+  overflow: hidden;
+}
+
+.skeletonContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.apodImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.apodOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: var(--space-24);
+  background: linear-gradient(to top, rgba(10,11,13,0.9) 0%, rgba(10,11,13,0) 100%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.apodTitle {
+  font-family: var(--font-headline);
+  font-weight: 700;
+  color: var(--starlight);
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.strip {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+  width: 100%;
+}
+
+.sourceItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.sourceName {
+  font-family: var(--font-mono);
+  color: var(--starlight);
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+}
+
+.sourceDesc {
+  font-family: var(--font-body);
+  color: var(--slate-ui);
+  font-size: 0.75rem;
+}

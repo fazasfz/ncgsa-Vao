@@ -1,0 +1,267 @@
+/* OnboardingTour.module.css - Observatory HUD styled tutorial modal */
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 8, 14, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 1rem;
+}
+
+.welcomeCard {
+  background: linear-gradient(180deg, rgba(16, 22, 36, 0.95) 0%, rgba(9, 12, 20, 0.98) 100%);
+  border: 1px solid rgba(224, 168, 94, 0.35);
+  border-radius: 16px;
+  padding: 2.25rem;
+  max-width: 440px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), 0 0 30px rgba(224, 168, 94, 0.15);
+  animation: modalScale 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.welcomeBadge {
+  display: inline-block;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--copper, #E0A85E);
+  background: rgba(224, 168, 94, 0.12);
+  border: 1px solid rgba(224, 168, 94, 0.3);
+  padding: 3px 10px;
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+}
+
+.welcomeTitle {
+  color: #F8FAFC;
+  font-family: var(--font-headline, 'Inter', sans-serif);
+  margin: 0 0 0.85rem 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.welcomeText {
+  color: #94A3B8;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  margin: 0 0 2rem 0;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.welcomeActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.tourCard {
+  background: linear-gradient(180deg, rgba(16, 22, 36, 0.95) 0%, rgba(8, 11, 19, 0.98) 100%);
+  border: 1px solid rgba(224, 168, 94, 0.35);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 400px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), 0 0 30px rgba(224, 168, 94, 0.15);
+  animation: modalScale 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes modalScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.tourImageContainer {
+  height: 150px;
+  background: radial-gradient(circle at center, rgba(30, 41, 59, 0.6) 0%, rgba(10, 14, 23, 0.95) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.imageGlowRing {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(224, 168, 94, 0.2) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.tourImage {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.8)) drop-shadow(0 0 16px rgba(224, 168, 94, 0.4));
+  z-index: 2;
+}
+
+/* Progress bar */
+.progressBar {
+  width: 100%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  position: relative;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #38BDF8, #E0A85E);
+  transition: width 0.3s ease;
+}
+
+.tourContent {
+  padding: 1.5rem 1.75rem;
+}
+
+.tourHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.85rem;
+}
+
+.tourTitle {
+  color: #F8FAFC;
+  margin: 0;
+  font-family: var(--font-headline, 'Inter', sans-serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.stepCounter {
+  color: var(--copper, #E0A85E);
+  font-family: var(--font-mono, monospace);
+  font-size: 0.8rem;
+  font-weight: 700;
+  background: rgba(224, 168, 94, 0.12);
+  border: 1px solid rgba(224, 168, 94, 0.25);
+  padding: 2px 8px;
+  border-radius: 9999px;
+}
+
+.tourDescription {
+  color: #94A3B8;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.93rem;
+  line-height: 1.6;
+  margin-bottom: 1.75rem;
+  min-height: 52px;
+}
+
+.tourActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navGroup {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.skipButton {
+  background: none;
+  border: none;
+  color: #64748B;
+  cursor: pointer;
+  font-family: var(--font-headline, 'Inter', sans-serif);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.5rem 0.25rem;
+  transition: color 0.2s;
+}
+
+.skipButton:hover {
+  color: #F8FAFC;
+}
+
+.prevButton {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #CBD5E1;
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  font-family: var(--font-headline, 'Inter', sans-serif);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.prevButton:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
+}
+
+.nextButton {
+  background: linear-gradient(135deg, #F59E0B, #E0A85E);
+  color: #0A0D14;
+  border: none;
+  padding: 0.5rem 1.1rem;
+  border-radius: 6px;
+  font-family: var(--font-headline, 'Inter', sans-serif);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(224, 168, 94, 0.35);
+}
+
+.nextButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(224, 168, 94, 0.5);
+  color: #000000;
+}
+
+.primaryButton {
+  background: linear-gradient(135deg, #F59E0B, #E0A85E);
+  color: #0A0D14;
+  border: none;
+  padding: 0.75rem 1.6rem;
+  border-radius: 8px;
+  font-family: var(--font-headline, 'Inter', sans-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(224, 168, 94, 0.35);
+}
+
+.primaryButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(224, 168, 94, 0.5);
+}
+
+.secondaryButton {
+  background: transparent;
+  color: #94A3B8;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.75rem 1.4rem;
+  border-radius: 8px;
+  font-family: var(--font-headline, 'Inter', sans-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.secondaryButton:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #F8FAFC;
+}

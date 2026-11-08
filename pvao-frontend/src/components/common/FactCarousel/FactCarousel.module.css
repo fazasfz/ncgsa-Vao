@@ -1,0 +1,118 @@
+.factsWrapper {
+  margin: 1.5rem 0;
+}
+
+.sectionTitle {
+  font-family: var(--font-mono, monospace);
+  color: var(--starlight, #F4EFE6);
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.sectionTitle::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.2) 0%, transparent 100%);
+}
+
+.tickerContainer {
+  padding: 1.5rem 0;
+  
+  position: relative;
+  overflow: hidden;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tickerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  padding-bottom: 0.5rem;
+}
+
+.tickerBadge {
+  font-family: sans-serif;
+  font-size: 12px;
+  color: var(--lunar-blue);
+  background: rgba(119, 172, 230, 0.1);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.tickerCategory {
+  font-family: sans-serif;
+  font-size: 12px;
+  color: var(--obsidian-light, #8a8a9a);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tickerBody {
+  flex: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.fadeIn {
+  opacity: 1;
+}
+
+.fadeOut {
+  opacity: 0;
+}
+
+.factQuestion {
+  font-family: sans-serif;
+  color: var(--starlight, #F4EFE6);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.factAnswer {
+  font-family: sans-serif;
+  color: var(--starlight, #F4EFE6);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.dotsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.2s ease;
+}
+
+.dot:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.activeDot {
+  background: var(--lunar-blue);
+  transform: scale(1.2);
+}

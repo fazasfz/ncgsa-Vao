@@ -1,0 +1,160 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--obsidian);
+  color: var(--starlight);
+  padding: 96px 2rem 3rem 2rem;
+  box-sizing: border-box;
+}
+
+.imageContainer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.backgroundImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+}
+
+.gradientOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 10, 12, 0.2) 0%,
+    var(--obsidian) 100%
+  );
+}
+
+.hudOverlay {
+  position: absolute;
+  inset: 2rem;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cornerTopLeft,
+.cornerTopRight,
+.cornerBottomLeft,
+.cornerBottomRight {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-color: var(--starlight);
+  border-style: solid;
+  opacity: 0.5;
+}
+
+.cornerTopLeft {
+  top: 0;
+  left: 0;
+  border-width: 1px 0 0 1px;
+}
+
+.cornerTopRight {
+  top: 0;
+  right: 0;
+  border-width: 1px 1px 0 0;
+}
+
+.cornerBottomLeft {
+  bottom: 0;
+  left: 0;
+  border-width: 0 0 1px 1px;
+}
+
+.cornerBottomRight {
+  bottom: 0;
+  right: 0;
+  border-width: 0 1px 1px 0;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+  padding: 3rem;
+  background: rgba(10, 10, 12, 0.6);
+  border: 1px solid rgba(224, 224, 224, 0.1);
+  
+}
+
+
+
+.title {
+  font-family: var(--font-headline);
+  font-size: 3rem;
+  margin: 0 0 1.5rem 0;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.description {
+  font-family: var(--font-headline);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--slate-ui);
+  margin-bottom: 3rem;
+  max-width: 600px;
+}
+
+.launchButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.5rem;
+  background-color: transparent;
+  color: var(--brass);
+  border: 1px solid var(--brass);
+  font-family: var(--font-headline);
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.launchButton:hover {
+  background-color: var(--brass);
+  color: var(--obsidian);
+  box-shadow: 0 0 20px rgba(184, 134, 11, 0.4);
+}
+
+.sourceTag {
+  font-family: var(--font-headline);
+  font-size: 0.85rem;
+  color: rgba(160, 174, 192, 0.6);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  .content {
+    padding: 2rem 1.5rem;
+  }
+  
+  .hudOverlay {
+    inset: 1rem;
+  }
+}

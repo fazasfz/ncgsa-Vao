@@ -1,0 +1,14 @@
+.mainLayoutMobile {
+  flex-direction: column;
+}
+
+.hudSidebarMobile {
+  width: 100%;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: visible;
+}
+
+.viewerSectionMobile {
+  min-height: 400px;
+}

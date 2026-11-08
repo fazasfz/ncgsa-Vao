@@ -1,0 +1,206 @@
+.creditsPage {
+  padding-top: var(--space-48);
+  padding-bottom: var(--space-64);
+  max-width: var(--breakpoint-xl);
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-48);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-16);
+}
+
+.heading {
+  font-size: 2.5rem;
+  color: var(--starlight);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.description {
+  color: var(--slate-ui);
+  font-family: var(--font-body);
+  max-width: 600px;
+  font-size: 1.125rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-64);
+}
+
+.roleGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+.roleHeading {
+  font-size: 1.25rem;
+  color: var(--brass);
+  font-family: var(--font-mono);
+  letter-spacing: 0.1em;
+  padding-bottom: var(--space-16);
+  text-transform: uppercase;
+}
+
+.personCard {
+  background: linear-gradient(145deg, rgba(20, 22, 26, 0.7) 0%, rgba(10, 11, 13, 0.4) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 8px;
+  padding: var(--space-32) var(--space-24);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  height: 100%;
+  margin-bottom: var(--space-24);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.personCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top right, rgba(224, 168, 94, 0.1), transparent 50%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.personCard::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 0%;
+  background: var(--copper);
+  transition: height 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.personCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(224, 168, 94, 0.2);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+}
+
+.personCard:hover::before {
+  opacity: 1;
+}
+
+.personCard:hover::after {
+  height: 100%;
+}
+
+.name {
+  font-family: var(--font-headline);
+  font-size: 1.4rem;
+  color: var(--starlight);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.title {
+  font-family: var(--font-mono);
+  color: var(--brass);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: var(--space-4) var(--space-8);
+  background: rgba(200, 137, 59, 0.1);
+  border: 1px solid rgba(200, 137, 59, 0.2);
+  border-radius: 4px;
+  align-self: flex-start;
+  margin-top: -8px;
+}
+
+.institution {
+  font-family: var(--font-mono);
+  color: var(--slate-ui);
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  margin-top: var(--space-4);
+  opacity: 0.8;
+}
+
+.institution::before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 1px;
+  background: var(--slate-ui);
+}
+
+.descriptionText {
+  font-family: var(--font-body);
+  color: rgba(244, 239, 230, 0.75); /* Soft starlight */
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-top: var(--space-8);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-16);
+  width: 100%;
+}
+
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  flex: 1;
+}
+
+.imagePlaceholder {
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(224, 168, 94, 0.2);
+  background: rgba(10, 11, 13, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagePlaceholderInner {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(200, 137, 59, 0.1) 0%, rgba(20, 22, 26, 0.8) 100%);
+}
+
+.personImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.personCard:hover .personImage {
+  transform: scale(1.08);
+}
+
+.personImage.noZoom,
+.personCard:hover .personImage.noZoom {
+  transform: none;
+}

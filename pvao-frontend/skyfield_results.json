@@ -1,0 +1,62 @@
+{
+  "2026-03-21T00:00:00Z": {
+    "phase_name": "Waxing Crescent",
+    "illumination_percentage": 5.06,
+    "distance_km": 370666.51,
+    "ra": "01h 31m 59.97s",
+    "dec": "+12deg 50' 36.7\"",
+    "sun_moon_angle": 26.0,
+    "rise_time": "2026-03-21T02:12:11.962825+00:00",
+    "set_time": "2026-03-21T16:05:00.855299+00:00",
+    "next_full_moon": "2026-04-02T02:11:57.995892+00:00",
+    "next_new_moon": "2026-04-17T11:51:48.238047+00:00"
+  },
+  "2026-06-21T12:00:00Z": {
+    "phase_name": "Waxing Crescent",
+    "illumination_percentage": 45.83,
+    "distance_km": 380923.42,
+    "ra": "11h 38m 32.57s",
+    "dec": "-00deg 19' 57.1\"",
+    "sun_moon_angle": 85.44,
+    "rise_time": "2026-06-22T07:36:42.814003+00:00",
+    "set_time": "2026-06-21T18:53:42.737271+00:00",
+    "next_full_moon": "2026-06-29T23:56:41.195782+00:00",
+    "next_new_moon": "2026-07-14T09:43:36.929372+00:00"
+  },
+  "2026-09-08T18:00:00Z": {
+    "phase_name": "Waning Crescent",
+    "illumination_percentage": 7.26,
+    "distance_km": 373700.34,
+    "ra": "09h 10m 35.08s",
+    "dec": "+16deg 59' 56.4\"",
+    "sun_moon_angle": 329.24,
+    "rise_time": "2026-09-08T22:33:36.052755+00:00",
+    "set_time": "2026-09-09T12:20:07.538787+00:00",
+    "next_full_moon": "2026-09-26T16:49:02.417877+00:00",
+    "next_new_moon": "2026-09-11T03:26:59.925808+00:00"
+  },
+  "2026-10-15T06:30:00Z": {
+    "phase_name": "Waxing Crescent",
+    "illumination_percentage": 20.07,
+    "distance_km": 402208.21,
+    "ra": "16h 53m 07.78s",
+    "dec": "-28deg 00' 53.0\"",
+    "sun_moon_angle": 53.67,
+    "rise_time": "2026-10-16T06:39:02.343576+00:00",
+    "set_time": "2026-10-15T15:18:19.011394+00:00",
+    "next_full_moon": "2026-10-26T04:11:48.778011+00:00",
+    "next_new_moon": "2026-11-09T07:02:06.919248+00:00"
+  },
+  "2026-12-25T21:00:00Z": {
+    "phase_name": "Waning Gibbous",
+    "illumination_percentage": 95.02,
+    "distance_km": 352676.02,
+    "ra": "08h 08m 18.89s",
+    "dec": "+21deg 54' 01.6\"",
+    "sun_moon_angle": 205.84,
+    "rise_time": "2026-12-26T14:53:08.472011+00:00",
+    "set_time": "2026-12-26T04:13:10.249024+00:00",
+    "next_full_moon": "2027-01-22T12:17:23.081341+00:00",
+    "next_new_moon": "2027-01-07T20:24:23.229548+00:00"
+  }
+}

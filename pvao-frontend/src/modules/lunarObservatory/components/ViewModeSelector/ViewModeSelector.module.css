@@ -1,0 +1,50 @@
+.selectorWrapper {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  
+}
+
+.selector {
+  width: 160px;
+}
+
+/* Ant Design overrides for dark theme */
+:global(.ant-select-selector) {
+  color: var(--starlight) !important;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.85rem;
+}
+
+:global(.ant-select-arrow) {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dropdown {
+  background: rgba(10, 10, 15, 0.95) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  
+  padding: 0 !important;
+}
+
+:global(.ant-select-item) {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.85rem;
+}
+
+:global(.ant-select-item-option-active),
+:global(.ant-select-item-option-selected) {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: var(--starlight) !important;
+}

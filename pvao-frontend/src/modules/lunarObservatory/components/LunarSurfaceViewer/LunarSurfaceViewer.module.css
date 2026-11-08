@@ -1,0 +1,79 @@
+.wrapper { 
+  position: relative;
+  width: 100%; 
+  height: 100%; 
+  min-height: 480px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+.viewer { 
+  width: 100%; 
+  height: 100%; 
+  min-height: 480px;
+  --poster-color: transparent; 
+}
+
+.loadingOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 14, 23, 0.85); /* semi-transparent obsidian-1 */
+  color: var(--starlight, #e2e8f0);
+  font-family: var(--font-mono, monospace);
+  font-size: 14px;
+  z-index: 10;
+  border-radius: inherit;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 5;
+  pointer-events: none;
+  font-family: var(--font-mono, monospace);
+  font-size: 10px;
+  color: var(--starlight, #e2e8f0);
+  opacity: 0.55;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.overlayDivider {
+  opacity: 0.4;
+}
+
+@keyframes loadToTop {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.hotspot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid var(--brass, #d4af37);
+  background: rgba(200, 137, 59, 0.3);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.hotspot:hover {
+  transform: scale(1.2);
+  background: rgba(200, 137, 59, 0.6);
+}

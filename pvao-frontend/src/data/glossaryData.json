@@ -1,0 +1,322 @@
+[
+  {
+    "category": "Exora (Exoplanet Exploration & Astrobiology)",
+    "terms": [
+      {
+        "name": "Exoplanet (Extrasolar Planet)",
+        "desc": "A planet located outside our solar system that orbits a star other than the Sun."
+      },
+      {
+        "name": "Habitable Zone (Goldilocks Zone)",
+        "desc": "The orbital region around a host star where planetary surface temperatures allow liquid water to exist."
+      },
+      {
+        "name": "Transit Method",
+        "desc": "A detection technique that measures the periodic dip in a star's brightness when an orbiting exoplanet crosses in front of its stellar disk."
+      },
+      {
+        "name": "Radial Velocity (Doppler Method)",
+        "desc": "A detection method measuring periodic Doppler shifts in a host star's spectrum caused by the gravitational tug of an orbiting exoplanet."
+      },
+      {
+        "name": "Earth Similarity Index (ESI)",
+        "desc": "A scalar value ranging from 0 to 1 measuring how physically similar an exoplanet is to Earth in terms of radius, density, escape velocity, and surface temperature."
+      },
+      {
+        "name": "Super-Earth",
+        "desc": "An extrasolar planet with a mass higher than Earth's but substantially below that of Uranus and Neptune (approx. 1.5 to 10 Earth masses)."
+      },
+      {
+        "name": "Mini-Neptune",
+        "desc": "A gas-rich planet with a thick hydrogen-helium atmosphere, smaller than Neptune but larger than Earth (approx. 2 to 4 Earth radii)."
+      },
+      {
+        "name": "Hot Jupiter",
+        "desc": "A class of giant gas exoplanets with physical characteristics similar to Jupiter, but orbiting very close to their parent stars (under 0.05 AU) with extreme surface temperatures."
+      },
+      {
+        "name": "Tidal Locking",
+        "desc": "A state where an exoplanet's orbital period matches its rotational period, causing one side to perpetually face its star (eternal day) and the other to face away (eternal night)."
+      },
+      {
+        "name": "Stellar Host Spectral Class (O, B, A, F, G, K, M)",
+        "desc": "Classification of host stars by surface temperature and luminosity, from hot blue O-stars to cool red M-dwarfs."
+      },
+      {
+        "name": "Transmission Spectroscopy",
+        "desc": "Analyzing starlight filtered through an exoplanet's atmosphere during a transit to identify atmospheric chemical biosignatures (water vapor, methane, ozone)."
+      }
+    ]
+  },
+  {
+    "category": "Deep Sky Explorer (Multi-Wavelength Atlas)",
+    "terms": [
+      {
+        "name": "HiPS (Hierarchical Progressive Surveys)",
+        "desc": "A standardized hierarchical tiling scheme based on HEALPix that allows smooth multi-resolution panning and zooming across petabyte-scale astronomical all-sky surveys."
+      },
+      {
+        "name": "FITS (Flexible Image Transport System)",
+        "desc": "The standard open scientific file format used by astronomers to store, transmit, and process multi-dimensional data, spectra, and calibrated imagery."
+      },
+      {
+        "name": "Aladin Lite",
+        "desc": "An interactive HTML5/WebGL celestial sky viewer developed by CDS (Strasbourg Astronomical Data Center) for exploring deep-sky images and catalogs."
+      },
+      {
+        "name": "Emission Nebula",
+        "desc": "A cloud of high-temperature ionized gas that emits light of various optical wavelengths (such as the H-alpha red glow from hydrogen atoms energized by nearby hot stars)."
+      },
+      {
+        "name": "Reflection Nebula",
+        "desc": "A cloud of interstellar dust that reflects and scatters the light of nearby stars, typically appearing blue because shorter wavelengths scatter more efficiently."
+      },
+      {
+        "name": "Planetary Nebula",
+        "desc": "An expanding glowing shell of ionized gas expelled by intermediate-mass stars during the late asymptotic giant branch phase of their evolution."
+      },
+      {
+        "name": "Supernova Remnant (SNR)",
+        "desc": "The expanding diffuse, high-energy structural remnant resulting from the explosive destruction of a massive star."
+      },
+      {
+        "name": "Open Cluster",
+        "desc": "A loosely bound group of up to a few thousand young stars formed from the same giant molecular cloud, usually found in galactic spiral arms."
+      },
+      {
+        "name": "Globular Cluster",
+        "desc": "A tightly bound, spherical collection of hundreds of thousands to millions of ancient stars orbiting a galactic core."
+      },
+      {
+        "name": "Redshift (z)",
+        "desc": "The displacement of spectral lines towards longer (redder) wavelengths in radiation from distant celestial bodies, proportional to recessional velocity caused by cosmic expansion."
+      },
+      {
+        "name": "RA (Right Ascension) & Dec (Declination)",
+        "desc": "The standard equatorial celestial coordinate system: Right Ascension measures angular distance eastward along the celestial equator (in hours/minutes/seconds), and Declination measures angular distance north (+) or south (-) of the celestial equator (in degrees)."
+      },
+      {
+        "name": "SIMBAD & MAST Catalogs",
+        "desc": "Major astronomical databases: SIMBAD (CDS) provides cross-identifications and bibliography for celestial objects outside the solar system; MAST is the primary NASA data archive for JWST, Hubble, and Kepler missions."
+      }
+    ]
+  },
+  {
+    "category": "Solar System Orbital Simulator",
+    "terms": [
+      {
+        "name": "N-Body Gravitational Simulation",
+        "desc": "Numerical integration technique solving the classical equations of motion for N celestial bodies interacting with each other through mutual gravitational attraction."
+      },
+      {
+        "name": "Keplerian Orbital Elements",
+        "desc": "Six fundamental mathematical parameters that uniquely describe the size, shape, and orientation of a celestial orbit (Semi-major axis, Eccentricity, Inclination, Longitude of ascending node, Argument of periapsis, True anomaly)."
+      },
+      {
+        "name": "Semi-Major Axis (a)",
+        "desc": "Half of the longest diameter of an elliptical orbit, defining the mean orbital distance of a body from its gravitational center (often measured in Astronomical Units, AU)."
+      },
+      {
+        "name": "Orbital Eccentricity (e)",
+        "desc": "A dimensionless parameter that determines the elongation of an orbit (0 = circular orbit, 0 < e < 1 = elliptical, e = 1 = parabolic, e > 1 = hyperbolic)."
+      },
+      {
+        "name": "Perihelion & Aphelion",
+        "desc": "The points in the orbit of a solar system body where it is closest to (perihelion) and farthest from (aphelion) the Sun."
+      },
+      {
+        "name": "Lagrange Points (L1 – L5)",
+        "desc": "Five positions in an orbital configuration of two large bodies where the gravitational forces and centrifugal force produce a stable or quasi-stable point of equilibrium for a small third object (e.g. SOHO at Sun-Earth L1, JWST at Sun-Earth L2)."
+      },
+      {
+        "name": "Orbital Resonance",
+        "desc": "A dynamical condition where two orbiting bodies exert regular, periodic gravitational influence on each other because their orbital periods are related by a ratio of small integers."
+      }
+    ]
+  },
+  {
+    "category": "Lunar Observatory",
+    "terms": [
+      {
+        "name": "Mare (Maria)",
+        "desc": "A large, dark, basaltic plain on the Moon formed by ancient volcanic floods following asteroid impacts; Latin for \"sea.\""
+      },
+      {
+        "name": "Rima (Rille)",
+        "desc": "A long, narrow depression or trench in the lunar surface resembling a river canyon, formed by collapsed ancient subsurface lava tubes or graben faults."
+      },
+      {
+        "name": "Statio",
+        "desc": "An official IAU landing site designation, used for historically significant locations such as Apollo crewed landing points and robotic landers."
+      },
+      {
+        "name": "Oceanus",
+        "desc": "The Latin designation for \"ocean\"; uniquely assigned to Oceanus Procellarum, the largest mare plain on the Moon."
+      },
+      {
+        "name": "Mons (Montes)",
+        "desc": "A lunar mountain or mountain range, frequently forming the elevated rims of ancient impact basins."
+      },
+      {
+        "name": "Vallis",
+        "desc": "A lunar valley, carved by massive tectonic faulting or thermal lava channel carving."
+      },
+      {
+        "name": "Rupes",
+        "desc": "A linear scarp or steep cliff formed by thrust faulting as the Moon cooled and contracted."
+      },
+      {
+        "name": "Lunar Libration",
+        "desc": "The apparent slow rocking or oscillating motion of the Moon as viewed from Earth, allowing observers to see roughly 59% of the total lunar surface over time."
+      },
+      {
+        "name": "Terminator",
+        "desc": "The moving dividing line between the sunlit day side and the dark night side of the Moon where surface topography casts the longest, most distinct shadows."
+      },
+      {
+        "name": "Lunar Regolith",
+        "desc": "A fine, powdery layer of unconsolidated dust, broken rock fragments, and impact glass covering the solid bedrock of the lunar crust."
+      },
+      {
+        "name": "Geologic Periods (Pre-Nectarian to Copernican)",
+        "desc": "The chronostratigraphic timeline of lunar evolution: Pre-Nectarian (>3.92 Ga), Nectarian (basin forming), Imbrian (mare basalt filling), Eratosthenian (crater degradation), and Copernican (bright ray crater systems)."
+      }
+    ]
+  },
+  {
+    "category": "Solar Observatory & Heliophysics",
+    "terms": [
+      {
+        "name": "SDO AIA 171 Å",
+        "desc": "Extreme ultraviolet imaging channel (Fe IX, ~0.6–1.0 MK) revealing the quiet solar corona and intricate coronal magnetic loops."
+      },
+      {
+        "name": "SDO AIA 304 Å",
+        "desc": "EUV filter (He II, ~0.05 MK) capturing the chromosphere and transition region, showing bright plasma prominences and filament eruptions."
+      },
+      {
+        "name": "SDO AIA 131 Å",
+        "desc": "EUV channel (Fe VIII/Fe XXI, ~10 MK) optimized for tracking intense solar flares and active magnetic reconnection regions."
+      },
+      {
+        "name": "SDO HMI Magnetogram",
+        "desc": "High-resolution full-disk map of the Sun's photospheric line-of-sight magnetic field polarity (positive/white = outward, negative/black = inward)."
+      },
+      {
+        "name": "SOHO LASCO C2 & C3",
+        "desc": "White-light coronagraphs that artificially occult the bright solar disk to track the outer solar corona and Coronal Mass Ejections (CMEs) out to 32 solar radii."
+      },
+      {
+        "name": "Coronal Mass Ejection (CME)",
+        "desc": "A massive expulsion of billions of tons of magnetized solar plasma and magnetic field erupting from the Sun into interplanetary space."
+      },
+      {
+        "name": "Solar Wind Speed & Proton Density",
+        "desc": "Key telemetry indicators of the supersonic stream of charged particles flowing outward from the Sun (typical speed: 300–800 km/s; density: 1–30 protons/cm³)."
+      },
+      {
+        "name": "GOES X-Ray Flux & Flare Classes (A, B, C, M, X)",
+        "desc": "Logarithmic classification of solar flares based on 0.1–0.8 nm peak X-ray emission: X-class denotes extreme flares capable of planet-wide radio blackouts."
+      },
+      {
+        "name": "Sunspot & Solar Cycle 25",
+        "desc": "A cooler, dark photospheric magnetic patch with an ~11-year periodicity driven by the Sun's internal dynamo; Cycle 25 is the current solar cycle reaching maximum activity in 2024–2026."
+      },
+      {
+        "name": "Coronal Heating Paradox",
+        "desc": "The long-standing astrophysical enigma of why the solar corona (>1,000,000 K) is hundreds of times hotter than the underlying visible photosphere (5,778 K)."
+      }
+    ]
+  },
+  {
+    "category": "Zenith (Sky Portal & Planetarium)",
+    "terms": [
+      {
+        "name": "Constellation Lines & Art",
+        "desc": "Geometric lines connecting recognized asterism stars, paired with classical and mythological artistic figures overlaid on the sky."
+      },
+      {
+        "name": "Azimuthal (Alt-Az) Coordinate Grid",
+        "desc": "Local observer-centric coordinate system: Altitude measures angular height above the horizon (0° to 90°), and Azimuth measures compass bearing (0° North to 360°)."
+      },
+      {
+        "name": "Equatorial Coordinate Grid",
+        "desc": "Earth-axis aligned celestial sphere grid tracking Right Ascension (0h to 24h) and Declination (-90° to +90°) independent of local observer location."
+      },
+      {
+        "name": "Atmospheric Extinction & Refraction",
+        "desc": "Optical bending and dimming of light as starlight passes through Earth's atmospheric layers, most pronounced near the horizon."
+      },
+      {
+        "name": "Deep-Sky Objects (DSOs)",
+        "desc": "Non-stellar objects beyond our solar system, including star clusters, nebulae, and external galaxies."
+      },
+      {
+        "name": "Red Night Mode",
+        "desc": "Low-intensity red light display mode designed to protect rhodopsin photopigments in human eyes, preserving natural night-vision adaptation."
+      },
+      {
+        "name": "Sidereal Time vs. Solar Time",
+        "desc": "Time measured relative to distant background stars (approx. 23h 56m 4s per Earth rotation) versus standard solar noon time."
+      }
+    ]
+  },
+  {
+    "category": "Astronomical Probe Tracker (Deep Space Missions)",
+    "terms": [
+      {
+        "name": "Parker Solar Probe",
+        "desc": "NASA spacecraft flying through the Sun's outer corona at record-breaking speeds (>600,000 km/h) to investigate coronal heating and solar wind acceleration."
+      },
+      {
+        "name": "James Webb Space Telescope (JWST)",
+        "desc": "Premier 6.5-meter infrared space observatory stationed at Sun-Earth L2 studying early cosmic galaxy formation, exoplanet atmospheres, and stellar birth."
+      },
+      {
+        "name": "Hubble Space Telescope (HST)",
+        "desc": "Pioneering optical, ultraviolet, and near-infrared observatory in low Earth orbit since 1990."
+      },
+      {
+        "name": "Lunar Reconnaissance Orbiter (LRO)",
+        "desc": "NASA orbiter providing high-resolution 0.5-meter optical surface cartography, laser altimetry, and thermal mapping of the Moon."
+      },
+      {
+        "name": "Mars Reconnaissance Orbiter (MRO)",
+        "desc": "High-resolution imaging and atmospheric sounding satellite investigating Martian geology, surface ice, and landing sites via the HiRISE camera."
+      },
+      {
+        "name": "Chandra X-Ray Observatory",
+        "desc": "NASA Great Observatory detecting X-ray emissions from black hole accretion disks, quasars, supernova remnants, and colliding galaxy clusters."
+      },
+      {
+        "name": "TESS (Transiting Exoplanet Survey Satellite)",
+        "desc": "NASA space telescope executing an all-sky photometric survey to discover transiting exoplanets around bright nearby stars."
+      },
+      {
+        "name": "Solar Orbiter",
+        "desc": "ESA/NASA spacecraft taking the first high-resolution images of the Sun's polar regions while tracking heliospheric magnetic flux."
+      },
+      {
+        "name": "Ephemeris Telemetry (JPL Horizons)",
+        "desc": "Precision computational datasets computing position, velocity vectors, orbital state, and observational geometry for spacecraft and natural bodies."
+      }
+    ]
+  },
+  {
+    "category": "Astro-Copilot & Virtual Observatory Platform",
+    "terms": [
+      {
+        "name": "Astro-Copilot AI",
+        "desc": "Contextual astronomical assistant powered by LLM reasoning, trained to interpret observational telemetry, ephemeris data, and sky phenomena in real time."
+      },
+      {
+        "name": "Virtual Observatory (VO)",
+        "desc": "An open, distributed international framework enabling researchers and the public to seamlessly query, visualize, and cross-match multi-agency astrophysical datasets."
+      },
+      {
+        "name": "Bortle Scale",
+        "desc": "A standardized nine-level numerical scale (Class 1 = pristine dark sky, Class 9 = inner-city sky) quantifying light pollution and night-sky visibility."
+      }
+    ]
+  }
+]

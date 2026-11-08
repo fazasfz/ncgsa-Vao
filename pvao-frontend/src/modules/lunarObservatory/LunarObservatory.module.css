@@ -1,0 +1,433 @@
+/* LunarObservatory.module.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #030408;
+  color: var(--starlight, #e2e8f0);
+}
+
+.mainWrapper {
+  width: 100%;
+  background-color: #030408;
+}
+
+/* Full Screen Hero Section */
+.fullScreenHero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem 3rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Space & Star Background Animations */
+.denseStarsLayer1,
+.denseStarsLayer2 {
+  position: absolute;
+  inset: -100px;
+  background-repeat: repeat;
+  pointer-events: none;
+}
+
+.denseStarsLayer1 {
+  background-color: transparent;
+  background-image: 
+    radial-gradient(1.5px 1.5px at 40px 60px, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(1px 1px at 120px 180px, rgba(200, 230, 255, 0.7), transparent),
+    radial-gradient(1.5px 1.5px at 250px 90px, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(1px 1px at 340px 240px, rgba(160, 210, 255, 0.6), transparent),
+    radial-gradient(2px 2px at 480px 140px, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(1px 1px at 580px 320px, rgba(220, 240, 255, 0.7), transparent),
+    radial-gradient(1.5px 1.5px at 700px 80px, rgba(255, 255, 255, 0.8), transparent);
+  background-size: 800px 800px;
+  animation: starTwinkle 3.5s ease-in-out infinite alternate;
+}
+
+.denseStarsLayer2 {
+  background-color: transparent;
+  background-image: 
+    radial-gradient(1px 1px at 90px 40px, rgba(180, 220, 255, 0.7), transparent),
+    radial-gradient(1.5px 1.5px at 210px 290px, rgba(255, 255, 255, 0.85), transparent),
+    radial-gradient(1px 1px at 390px 170px, rgba(200, 230, 255, 0.5), transparent),
+    radial-gradient(2px 2px at 510px 380px, rgba(255, 255, 255, 0.95), transparent),
+    radial-gradient(1px 1px at 640px 210px, rgba(170, 215, 255, 0.6), transparent),
+    radial-gradient(1.5px 1.5px at 780px 360px, rgba(255, 255, 255, 0.75), transparent);
+  background-size: 900px 900px;
+  animation: starDrift 110s linear infinite;
+}
+
+.nebulaGlow {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 68% 32%, rgba(20, 80, 150, 0.18) 0%, transparent 60%),
+    radial-gradient(circle at 25% 75%, rgba(56, 189, 248, 0.12) 0%, transparent 55%),
+    radial-gradient(circle at 50% 50%, rgba(14, 165, 233, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+@keyframes starTwinkle {
+  0% { opacity: 0.35; }
+  100% { opacity: 0.95; }
+}
+
+@keyframes starDrift {
+  from { transform: translateY(0); }
+  to { transform: translateY(-450px); }
+}
+
+/* Floating Overlay Header */
+.overlayHeader {
+  position: absolute;
+  top: 5.5rem;
+  left: 3rem;
+  z-index: 20;
+}
+
+.overlayTitle {
+  font-family: var(--font-headline, 'Inter', sans-serif);
+  color: #38bdf8;
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin: 0;
+  text-transform: uppercase;
+  text-shadow: 0 0 16px rgba(56, 189, 248, 0.45);
+}
+
+/* Top-Right Floating Fun Facts Box */
+.topRightFacts {
+  position: absolute;
+  top: 5.5rem;
+  right: 3rem;
+  z-index: 20;
+  width: 300px;
+}
+
+.popFactCard {
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 12px;
+  padding: 1.25rem;
+  backdrop-filter: blur(10px);
+  background: rgba(10, 14, 23, 0.65);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7);
+}
+
+.factBadge {
+  display: inline-block;
+  background-color: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  font-family: var(--font-headline, 'Inter', sans-serif);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  margin-bottom: 0.75rem;
+}
+
+.factContent {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.popIn {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.popOut {
+  opacity: 0;
+  transform: translateY(-8px) scale(0.96);
+}
+
+.factAnswer {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  color: #cbd5e1;
+  font-size: 0.825rem;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Balanced 3-Column Hero Layout */
+.heroContentGrid {
+  display: grid;
+  grid-template-columns: 280px 1fr 280px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 7rem;
+  margin-bottom: 2.5rem;
+  z-index: 10;
+}
+
+/* Left Column - Telemetry Sidebar */
+.leftColumn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.unifiedGlassSidebar {
+  position: absolute;
+  left: 2rem;
+  top: calc(50% + 1.5rem);
+  transform: translateY(-50%);
+  width: 280px;
+  background: rgba(10, 14, 23, 0.65);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 12px;
+  padding: 1.5rem;
+  z-index: 10;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+.sidebarHeader {
+  color: #38bdf8;
+  font-size: 1rem;
+  margin: 0 0 1rem 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: var(--font-headline, 'Inter', sans-serif);
+  font-weight: 700;
+}
+
+.metricSection {
+  margin-bottom: 0.8rem;
+}
+
+.metricValue {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--starlight, #f1f5f9);
+  line-height: 1.1;
+  font-family: var(--font-headline, 'Inter', sans-serif);
+}
+
+.metricValueHighlight {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #38bdf8;
+  line-height: 1.2;
+  font-family: var(--font-headline, 'Inter', sans-serif);
+}
+
+.metricValueCoords {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--starlight, #f1f5f9);
+  line-height: 1.2;
+  font-family: var(--font-headline, 'Inter', sans-serif);
+}
+
+.metricUnit {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+.metricSubLabel {
+  font-size: 0.7rem;
+  color: #94a3b8;
+  margin-bottom: 0.6rem;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  text-transform: capitalize;
+}
+
+/* Center Column - 3D Interactive Stage */
+.centerColumn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.lunarStage {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lunarGlowHalo {
+  position: absolute;
+  inset: -50px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.22) 0%, rgba(14, 165, 233, 0.08) 45%, transparent 70%);
+  filter: blur(35px);
+  pointer-events: none;
+}
+
+/* Right Column - Moon Physical Specs */
+.rightColumn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.moonStatsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: right;
+  transform: translateY(140px);
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.statLabel {
+  font-family: var(--font-headline, 'Inter', sans-serif);
+  color: #38bdf8;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+}
+
+.statValue {
+  font-family: var(--font-headline, 'Inter', sans-serif);
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Live Observation Time Badge */
+.timestampBadge {
+  position: absolute;
+  bottom: -2.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #38bdf8;
+  font-family: var(--font-headline, 'Inter', sans-serif);
+  font-size: 0.8rem;
+  background: rgba(10, 14, 23, 0.75);
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  white-space: nowrap;
+  z-index: 25;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+}
+
+/* Lower Dashboard Sections Support */
+.dashboardSectionTitle {
+  font-family: var(--font-headline, 'Inter', sans-serif);
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--starlight, #f8fafc);
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 0 16px rgba(56, 189, 248, 0.25);
+  margin: 0 0 2rem 0;
+}
+
+.error {
+  color: #ff4444;
+  font-family: var(--font-mono, monospace);
+  padding: var(--space-16, 1rem);
+  border: 1px solid #ff4444;
+  background: rgba(255, 68, 68, 0.1);
+  border-radius: var(--radius-md, 8px);
+  margin: 1rem 2rem;
+}
+
+.funFactsContainer {
+  padding: 0 0.5rem 2rem 0.5rem;
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .heroContentGrid {
+    grid-template-columns: 240px 1fr 240px;
+  }
+  .lunarStage {
+    width: 480px;
+    height: 480px;
+  }
+  .leftColumn {
+    transform: translateY(-20px) translateX(0);
+  }
+  .timestampBadge {
+    transform: translate(0, 0);
+    bottom: 1rem;
+    right: 1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .fullScreenHero {
+    height: auto;
+    min-height: auto;
+    padding: 1.5rem 1rem;
+  }
+  .overlayHeader {
+    position: static;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .overlayTitle {
+    transform: none;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .topRightFacts {
+    position: static;
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  .heroContentGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+  .leftColumn {
+    transform: none;
+    justify-content: center;
+  }
+  .unifiedGlassSidebar {
+    position: static;
+    transform: none;
+    width: 100%;
+    max-width: 320px;
+  }
+  .rightColumn {
+    justify-content: center;
+  }
+  .moonStatsContainer {
+    transform: none;
+    text-align: center;
+    align-items: center;
+  }
+  .statItem {
+    align-items: center;
+  }
+  .lunarStage {
+    width: 340px;
+    height: 340px;
+  }
+  .timestampBadge {
+    position: static;
+    transform: none;
+    margin-top: 1rem;
+    text-align: center;
+  }
+}

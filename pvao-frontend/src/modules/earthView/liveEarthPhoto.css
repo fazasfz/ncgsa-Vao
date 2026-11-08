@@ -1,0 +1,37 @@
+.earthview-live-photo {
+  position: absolute;
+  top: 130px;
+  right: var(--space-16);
+  z-index: 1000;
+  background: rgba(10, 11, 13, 0.85);
+  border: var(--hud-border-width) solid var(--hud-border-color);
+  padding: var(--space-16);
+  width: 180px;
+  font-family: var(--font-mono);
+  color: var(--starlight);
+  text-align: center;
+}
+
+.earthview-live-photo-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  color: var(--slate-ui);
+  margin-bottom: var(--space-12);
+}
+
+.earthview-live-photo-img {
+  width: 100%;
+  border-radius: 50%;
+  display: block;
+}
+
+.earthview-live-photo-time {
+  font-size: 0.6rem;
+  color: var(--copper);
+  margin-top: var(--space-12);
+}
+
+.earthview-live-photo-error {
+  font-size: 0.7rem;
+  color: var(--slate-ui);
+}

@@ -1,0 +1,96 @@
+.dashboardSection {
+  background-color: var(--obsidian-1);
+  padding: var(--space-32) 0 var(--space-64) 0;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--breakpoint-xl);
+  margin: 0 auto;
+}
+
+.strip {
+  display: flex;
+  background: var(--obsidian-2);
+  border: 1px solid var(--hud-border-color);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.stripLabel {
+  background: rgba(224, 168, 94, 0.15); /* Copper tint */
+  color: var(--copper);
+  font-family: var(--font-headline);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: var(--space-16) var(--space-24);
+  display: flex;
+  align-items: center;
+  border-right: 1px solid var(--hud-border-color);
+  white-space: nowrap;
+}
+
+.metricsContainer {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding: 0 var(--space-24);
+  overflow-x: auto; /* Allow horizontal scroll on smaller screens */
+  gap: var(--space-32);
+}
+
+.metricsContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.metricItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  white-space: nowrap;
+}
+
+.metricLabel {
+  font-family: var(--font-mono);
+  color: var(--slate-ui);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.metricValue {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.ok {
+  color: #27c93f; /* Green */
+}
+
+.warning {
+  color: #ffbd2e; /* Yellow */
+}
+
+.neutral {
+  color: var(--starlight);
+}
+
+@media (max-width: 992px) {
+  .strip {
+    flex-direction: column;
+  }
+  
+  .stripLabel {
+    border-right: none;
+    border-bottom: 1px solid var(--hud-border-color);
+    justify-content: center;
+  }
+  
+  .metricsContainer {
+    padding: var(--space-16);
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-16);
+  }
+}

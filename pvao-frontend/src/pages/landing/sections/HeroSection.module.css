@@ -1,0 +1,82 @@
+.heroSection {
+  position: relative;
+  overflow: hidden;
+}
+
+.heroOverlay {
+  background: linear-gradient(to bottom, rgba(10, 11, 13, 0.4) 0%, rgba(10, 11, 13, 0.5) 50%, var(--obsidian-2) 100%) !important;
+}
+
+.hudTopLeft {
+  position: absolute;
+  top: 110px;
+  left: var(--space-24);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  z-index: 10;
+}
+
+.centerContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 6.5rem;
+  padding-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-24);
+}
+
+.titleWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.title {
+  font-family: var(--font-headline);
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: 0.05em;
+  color: var(--starlight);
+  text-transform: uppercase;
+  white-space: pre-wrap;
+  margin: 0;
+}
+
+.mission {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.25rem;
+  color: var(--starlight);
+  opacity: 0.9;
+  font-family: var(--font-body);
+  letter-spacing: 0.02em;
+}
+
+.platformDescription {
+  max-width: 600px;
+  margin: var(--space-8) auto 0;
+  font-size: 1rem;
+  color: var(--starlight);
+  opacity: 0.7;
+  font-family: var(--font-body);
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+}
+
+.dailyOperations {
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: var(--starlight);
+  opacity: 0.8;
+  font-family: var(--font-headline);
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}

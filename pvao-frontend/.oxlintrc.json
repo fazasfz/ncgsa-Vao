@@ -1,0 +1,9 @@
+//This is a configuration file for a tool called Oxlint. It's a "linter" that scans your code for errors, bugs, or bad formatting before you even run the code.
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["react", "oxc"],
+  "rules": {
+    "react/rules-of-hooks": "error",
+    "react/only-export-components": ["warn", { "allowConstantExport": true }]
+  }
+}

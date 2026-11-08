@@ -1,0 +1,142 @@
+.triggerButton {
+  position: fixed;
+  bottom: var(--space-32);
+  right: var(--space-32);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--obsidian);
+  border: 2px solid var(--brass);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  padding: 0;
+}
+
+.triggerButton:hover {
+  transform: scale(1.05);
+  border-color: var(--brass-light, #ffd700);
+}
+
+.iconContainer {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  color: var(--brass);
+}
+
+.triggerButton:hover .icon {
+  color: var(--brass-light, #ffd700);
+}
+
+.pulseRing, .pulseRingDelayed {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid var(--brass);
+  opacity: 0;
+  z-index: 1;
+}
+
+.pulseRing {
+  animation: pulse 3s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+.pulseRingDelayed {
+  animation: pulse 3s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  animation-delay: 1.5s;
+}
+
+@keyframes pulse {
+  0% {
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+  }
+  100% {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+  }
+}
+
+/* Media query replaced by useBreakpoint hook logic */
+.triggerButtonMobile {
+  bottom: var(--space-24);
+  right: var(--space-24);
+  width: 48px;
+  height: 48px;
+}
+
+.popup {
+  position: absolute;
+  right: calc(100% + 20px);
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--obsidian, #1a1a2e);
+  color: var(--starlight, #f0f0f0);
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--brass, #d4af37);
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  opacity: 0;
+  animation: popupFadeIn 0.5s ease 1s forwards, popupFloat 3s ease-in-out infinite;
+  font-family: 'Inter', sans-serif;
+  z-index: 10;
+}
+
+.popup::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -6px;
+  transform: translateY(-50%);
+  border-width: 6px 0 6px 6px;
+  border-style: solid;
+  border-color: transparent transparent transparent var(--brass, #d4af37);
+}
+
+.popup::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  transform: translateY(-50%);
+  border-width: 5px 0 5px 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent var(--obsidian, #1a1a2e);
+  z-index: 1;
+}
+
+@keyframes popupFadeIn {
+  from { opacity: 0; transform: translateY(-50%) translateX(10px); }
+  to { opacity: 1; transform: translateY(-50%) translateX(0); }
+}
+
+@keyframes popupFloat {
+  0%, 100% { transform: translateY(-50%) translateX(0); }
+  50% { transform: translateY(-50%) translateX(-5px); }
+}
+
+.popupHidden {
+  opacity: 0 !important;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}

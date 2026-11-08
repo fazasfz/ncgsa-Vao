@@ -1,0 +1,151 @@
+.container {
+  color: var(--starlight, #f8fafc);
+  font-family: var(--font-body, 'Inter', sans-serif);
+  padding: 1.5rem 0;
+}
+
+.header {
+  margin-bottom: 1.5rem;
+}
+
+.phaseTitle {
+  font-family: var(--font-headline, 'Inter', sans-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #38bdf8;
+  margin: 0;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-shadow: 0 0 12px rgba(56, 189, 248, 0.3);
+}
+
+.datesGrid {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 1.5rem;
+  background: rgba(10, 14, 23, 0.65);
+  border: 1px solid rgba(200, 137, 59, 0.25);
+  border-radius: 12px;
+  padding: 1.25rem 1.75rem;
+  width: fit-content;
+  backdrop-filter: blur(8px);
+}
+
+.dateBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dateLabel {
+  font-family: var(--font-headline, 'Inter', sans-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #94a3b8;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.dateValue {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--starlight, #f8fafc);
+}
+
+.timelineWrapper {
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.timelineWrapper::-webkit-scrollbar {
+  height: 6px;
+}
+
+.timelineWrapper::-webkit-scrollbar-thumb {
+  background: rgba(56, 189, 248, 0.25);
+  border-radius: 4px;
+}
+
+.timelineScroll {
+  display: flex;
+  gap: 16px;
+  min-width: max-content;
+}
+
+.timelineItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  background: rgba(10, 14, 23, 0.5);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  border-radius: 10px;
+  min-width: 96px;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(4px);
+}
+
+.timelineItem:hover {
+  background: rgba(56, 189, 248, 0.1);
+  border-color: rgba(56, 189, 248, 0.4);
+  transform: translateY(-2px);
+}
+
+.todayItem {
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.5);
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+}
+
+.dayLabel {
+  font-family: var(--font-headline, 'Inter', sans-serif);
+  font-size: 11px;
+  font-weight: 600;
+  color: #94a3b8;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.todayItem .dayLabel {
+  color: #38bdf8;
+  font-weight: 700;
+}
+
+.dateLabelBottom {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--starlight, #f8fafc);
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  color: #38bdf8;
+  opacity: 0.7;
+}
+
+/* SVG Moon Phase Icon Styles */
+.moonIcon {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+.moonBg {
+  fill: #0c101a;
+  stroke: rgba(56, 189, 248, 0.35);
+  stroke-width: 1px;
+}
+
+.moonLit {
+  fill: #f8fafc;
+  stroke: none;
+  filter: drop-shadow(0 0 6px rgba(56, 189, 248, 0.5));
+}

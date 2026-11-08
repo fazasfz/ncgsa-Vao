@@ -1,0 +1,32 @@
+.earthview-toggle {
+  position: absolute;
+  bottom: var(--space-16);
+  right: var(--space-16);
+  z-index: 1000;
+  display: flex;
+  gap: var(--space-4);
+  background: rgba(10, 11, 13, 0.75);
+  border: var(--hud-border-width) solid var(--hud-border-color);
+  padding: var(--space-4);
+}
+
+.earthview-toggle-btn {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  color: var(--slate-ui);
+  background: transparent;
+  border: var(--hud-border-width) solid transparent;
+  padding: var(--space-8) var(--space-12);
+  cursor: pointer;
+}
+
+.earthview-toggle-btn:hover {
+  color: var(--starlight);
+}
+
+.earthview-toggle-btn--active {
+  color: var(--obsidian-1);
+  background: var(--copper);
+  border-color: var(--copper);
+}

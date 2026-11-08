@@ -1,0 +1,320 @@
+/* CategoryLanding.module.css - Modern interactive observatory cards */
+
+.landingContainer {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 108px 2rem 4rem 2rem;
+  box-sizing: border-box;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.headerSection {
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.badgeHeader {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  background: rgba(224, 168, 94, 0.1);
+  border: 1px solid rgba(224, 168, 94, 0.3);
+  color: var(--copper, #E0A85E);
+  font-family: var(--font-mono, monospace);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.badgeDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #38BDF8;
+  box-shadow: 0 0 8px #38BDF8;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.mainTitle {
+  font-family: var(--font-headline, 'Inter', sans-serif);
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--starlight, #F8FAFC);
+  margin: 0 0 0.5rem 0;
+  line-height: 1.15;
+  background: linear-gradient(135deg, #FFFFFF 30%, #CBD5E1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subTitle {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 1.05rem;
+  color: var(--slate-ui, #94A3B8);
+  margin: 0;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+/* Cards Grid */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .cardsGrid {
+    grid-template-columns: 1fr;
+  }
+  .landingContainer {
+    padding: 96px 1.25rem 3rem 1.25rem;
+  }
+  .mainTitle {
+    font-size: 2rem;
+  }
+}
+
+/* Interactive Card */
+.categoryCard {
+  position: relative;
+  background: linear-gradient(180deg, rgba(17, 23, 38, 0.75) 0%, rgba(9, 13, 22, 0.95) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.categoryCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(224, 168, 94, 0.8), rgba(56, 189, 248, 0.8), transparent);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  z-index: 5;
+}
+
+.categoryCard:hover {
+  transform: translateY(-8px);
+  border-color: rgba(224, 168, 94, 0.45);
+  box-shadow: 0 20px 45px -12px rgba(0, 0, 0, 0.9), 0 0 30px rgba(224, 168, 94, 0.18);
+}
+
+.categoryCard:hover::before {
+  opacity: 1;
+}
+
+/* Card Image Header */
+.cardImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 210px;
+  overflow: hidden;
+  background: #0B0E14;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.categoryCard:hover .cardImage {
+  transform: scale(1.08);
+}
+
+.cardImageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 14, 23, 0.15) 0%,
+    rgba(10, 14, 23, 0.4) 50%,
+    rgba(10, 14, 23, 0.98) 100%
+  );
+  pointer-events: none;
+}
+
+.cardBadgePill {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 3;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #F8FAFC;
+  background: rgba(10, 14, 23, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  text-transform: uppercase;
+}
+
+.liveIndicator {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 3;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(10, 14, 23, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--copper, #E0A85E);
+  transition: all 0.3s ease;
+}
+
+.categoryCard:hover .liveIndicator {
+  background: rgba(224, 168, 94, 0.2);
+  border-color: var(--copper, #E0A85E);
+  color: #FFFFFF;
+  transform: scale(1.1);
+}
+
+/* Card Body */
+.cardBody {
+  padding: 1.5rem 1.5rem 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.cardTitle {
+  font-family: var(--font-headline, 'Inter', sans-serif);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #F8FAFC;
+  margin: 0;
+  letter-spacing: -0.01em;
+  transition: color 0.2s ease;
+}
+
+.categoryCard:hover .cardTitle {
+  color: var(--copper, #E0A85E);
+}
+
+.cardDescription {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: #94A3B8;
+  margin: 0;
+}
+
+/* Interactive Explore Button Area */
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.exploreBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-headline, 'Inter', sans-serif);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--copper, #E0A85E);
+  transition: all 0.25s ease;
+}
+
+.exploreArrow {
+  display: inline-flex;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.categoryCard:hover .exploreArrow {
+  transform: translateX(6px);
+}
+
+.categoryCard:hover .exploreBtn {
+  color: #F8FAFC;
+  text-shadow: 0 0 12px rgba(224, 168, 94, 0.6);
+}
+
+.actionPill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--slate-ui, #94A3B8);
+  transition: all 0.25s ease;
+}
+
+.categoryCard:hover .actionPill {
+  background: var(--copper, #E0A85E);
+  border-color: var(--copper, #E0A85E);
+  color: #0A0D14;
+  transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.85);
+  }
+}

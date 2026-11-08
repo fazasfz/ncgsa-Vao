@@ -1,0 +1,1939 @@
+.mainWrapper {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #020205;
+    color: var(--starlight);
+}
+
+.fullScreenHero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.denseStarsLayer1,
+.denseStarsLayer2 {
+    position: absolute;
+    inset: -100px;
+    background-repeat: repeat;
+    pointer-events: none;
+}
+
+.denseStarsLayer1 {
+    background-color: transparent;
+    animation: starTwinkle 3s ease-in-out infinite alternate;
+}
+
+.denseStarsLayer2 {
+    background-color: transparent;
+    animation: starDrift 90s linear infinite;
+}
+
+.nebulaGlow {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 70% 30%, rgba(180, 50, 0, 0.18) 0%, transparent 60%),
+        radial-gradient(circle at 20% 80%, rgba(255, 120, 0, 0.12) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.unifiedGlassSidebar {
+    position: absolute;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 280px;
+    background: rgba(12, 10, 15, 0.55);
+    border: 1px solid rgba(243, 156, 18, 0.25);
+    border-radius: 12px;
+    padding: 1.5rem;
+    z-index: 10;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7);
+}
+
+.sidebarHeader {
+    color: #f39c12;
+    font-size: 1rem;
+    margin: 0 0 1rem 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+
+.metricSection {
+    margin-bottom: 0.8rem;
+}
+
+.sectionLabel {
+    color: #f39c12;
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    font-family: sans-serif;
+}
+
+.metricValue {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--starlight);
+    line-height: 1.1;
+    font-family: sans-serif;
+}
+
+.metricValueHighlight {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #ff5533;
+    line-height: 1.1;
+    font-family: sans-serif;
+}
+
+.metricUnit {
+    font-size: 0.8rem;
+    color: #888;
+    font-weight: 400;
+}
+
+.metricSubLabel {
+    font-size: 0.7rem;
+    color: #aaa;
+    margin-bottom: 0.6rem;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: rgba(243, 156, 18, 0.2);
+    margin: 1rem 0;
+}
+
+.solarStage {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sunViewport {
+    position: relative;
+    width: 580px;
+    height: 580px;
+    border-radius: 50%;
+    cursor: grab;
+    transition: transform 0.05s ease-out;
+}
+
+.outerFlareRay {
+    position: absolute;
+    inset: -90px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 100, 0, 0.5) 0%, rgba(243, 156, 18, 0.2) 40%, transparent 70%);
+    filter: blur(25px);
+    animation: flarePulse 4s ease-in-out infinite alternate;
+}
+
+.plasmaCorona {
+    position: absolute;
+    inset: -30px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #ff6600 0%, #d35400 50%, rgba(144, 12, 63, 0.8) 80%, transparent 100%);
+    filter: blur(12px);
+}
+
+.chromosphereFlares {
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    box-shadow: 0 0 60px #ff4500, inset 0 0 50px #ff2200;
+}
+
+.photosphereCore {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    background: radial-gradient(circle, #fff3cd 0%, #ffaa00 35%, #e65100 75%, #800000 100%);
+    box-shadow: inset -20px -20px 80px rgba(0, 0, 0, 0.8);
+}
+
+.turbulentPlasmaTexture {
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, #ffe082 10%, #ff8f00 40%, #d84315 70%, #4e0d00 95%);
+    mix-blend-mode: overlay;
+    opacity: 0.9;
+    animation: rotateSun 180s linear infinite;
+}
+
+.organicSunspot {
+    position: absolute;
+    width: 26px;
+    height: 22px;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+}
+
+.penumbraRing {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, #7a2d00 20%, #3d1400 80%);
+    border-radius: 45% 55% 60% 40% / 50% 45% 55% 50%;
+    filter: blur(1px);
+}
+
+.umbraCore {
+    position: absolute;
+    inset: 5px;
+    background: #080100;
+    border-radius: 40% 60% 50% 50% / 55% 40% 60% 45%;
+    box-shadow: 0 0 4px #000;
+}
+
+.fixedDetailPanel {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: rgba(10, 10, 15, 0.85);
+    border: 1px solid #f39c12;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    color: var(--starlight);
+    font-family: sans-serif;
+    font-size: 0.85rem;
+    z-index: 20;
+    pointer-events: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.timestampBadge {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 2rem;
+    color: #f39c12;
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: 1px solid rgba(243, 156, 18, 0.3);
+    transform: translate(120px, -30px);
+}
+
+.gallerySection {
+    margin-top: 2.5rem;
+    padding: 2rem;
+    width: 100%;
+}
+
+.galleryHeading {
+    color: #f39c12;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-family: sans-serif;
+}
+
+.galleryGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.imageCard {
+    flex: 1 1 220px;
+    background-color: #121212;
+    border: 1px solid #222;
+    border-radius: 6px;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.solarImage {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 4px;
+    background-color: #000;
+}
+
+.imageCaption {
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    color: #aaa;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.imagePlaceholder {
+    width: 100%;
+    height: 200px;
+    background-color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f39c12;
+    font-size: 0.8rem;
+    font-family: sans-serif;
+    border-radius: 4px;
+}
+
+@keyframes starTwinkle {
+    0% {
+        opacity: 0.4;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes starDrift {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-450px);
+    }
+}
+
+@keyframes flarePulse {
+    from {
+        transform: scale(0.96);
+        opacity: 0.7;
+    }
+
+    to {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+}
+
+@keyframes rotateSun {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.sketchfabWrapper {
+    position: relative;
+    width: 650px;
+    height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 0 80px rgba(255, 100, 0, 0.35);
+}
+
+.sketchfabIframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 50%;
+    mix-blend-mode: screen;
+}
+
+.hotspotOverlayLayer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border-radius: 50%;
+}
+
+.hotspotOverlayLayer .organicSunspot {
+    pointer-events: auto;
+}
+
+.organicSunspot {
+    position: absolute;
+    width: 12px;
+    height: 10px;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.2s ease, transform 0.1s linear;
+    mix-blend-mode: multiply;
+    filter: drop-shadow(0 0 2px rgba(100, 20, 0, 0.8));
+}
+
+.organicSunspot:hover {
+    transform: translate(-50%, -50%) scale(1.35);
+    mix-blend-mode: normal;
+}
+
+.penumbraRing {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(80, 20, 0, 0.9) 20%, rgba(40, 10, 0, 0.7) 80%);
+    border-radius: 48% 52% 58% 42% / 52% 48% 52% 48%;
+    filter: blur(0.8px);
+}
+
+.umbraCore {
+    position: absolute;
+    inset: 2px;
+    background: #050100;
+    border-radius: 40% 60% 50% 50% / 55% 40% 60% 45%;
+    box-shadow: inset 0 0 2px #000;
+}
+
+.sketchfabIframe :global(.annotation-container),
+.sketchfabIframe :global(.s-annotation) {
+    background: rgba(10, 5, 0, 0.85) !important;
+    border: 1px solid #c8893b !important;
+    border-radius: 50% !important;
+    width: 14px !important;
+    height: 14px !important;
+    box-shadow: 0 0 8px rgba(200, 137, 59, 0.8) !important;
+}
+
+.sketchfabIframe :global(.annotation-tooltip) {
+    background: rgba(15, 12, 10, 0.9) !important;
+    border: 1px solid #f39c12 !important;
+    color: #e0e0e0 !important;
+    font-family: sans-serif !important;
+    font-size: 0.75rem !important;
+    border-radius: 6px !important;
+
+}
+
+.hotspotOverlayLayer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.organicSunspot {
+    position: absolute;
+    width: 20px;
+    height: 18px;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    pointer-events: auto;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.organicSunspot:hover {
+    transform: translate(-50%, -50%) scale(1.4);
+    z-index: 20;
+}
+
+.penumbraRing {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(160, 50, 0, 0.95) 20%, rgba(60, 15, 0, 0.85) 80%);
+    border-radius: 48% 52% 58% 42% / 52% 48% 52% 48%;
+    box-shadow: 0 0 6px rgba(255, 100, 0, 0.7);
+}
+
+.umbraCore {
+    position: absolute;
+    inset: 4px;
+    background: #080200;
+    border-radius: 40% 60% 50% 50% / 55% 40% 60% 45%;
+    box-shadow: inset 0 0 4px #000;
+}
+
+.spotPulseRing {
+    position: absolute;
+    inset: -4px;
+    border: 1px dashed rgba(243, 156, 18, 0.6);
+    border-radius: 50%;
+    animation: spotPulse 2.5s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes spotPulse {
+    0% {
+        transform: scale(0.9);
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(0.9);
+        opacity: 0.3;
+    }
+}
+
+.chartLoading {
+    font-family: sans-serif;
+    color: #e2e8f0;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.chartError {
+    font-family: sans-serif;
+    color: #ef4444;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.chartBody :global(.recharts-cartesian-axis-tick-value) {
+    fill: #e2e8f0;
+    font-size: 11px;
+    font-family: sans-serif;
+}
+
+.chartBody :global(.recharts-default-tooltip) {
+    background-color: #0f172a !important;
+    border-color: #334155 !important;
+    color: #f8fafc !important;
+    border-radius: 8px;
+    font-family: sans-serif;
+}
+
+.chartTitle {
+    font-family: sans-serif;
+    color: #ff8c00;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    margin-bottom: 20px;
+    text-transform: none;
+}
+
+.chartCard {
+    margin-top: 48px;
+    margin-bottom: 32px;
+    padding: 0 24px;
+}
+
+.sectionTitle {
+    font-family: sans-serif;
+    color: #ff8c00;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    margin-top: 40px;
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+.chartBody {
+    width: 100%;
+    height: 320px;
+    min-height: 320px;
+    margin-bottom: 32px;
+}
+
+.factsWrapper {
+    margin-top: 48px;
+    margin-bottom: 48px;
+    padding: 0 24px;
+}
+
+.tickerContainer {
+    background: rgba(15, 23, 42, 0.4);
+    border: 1px solid rgba(255, 140, 0, 0.2);
+    border-radius: 12px;
+    padding: 24px 32px;
+
+    position: relative;
+}
+
+.tickerHeader {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.tickerBadge {
+    background-color: rgba(255, 140, 0, 0.15);
+    color: #ff8c00;
+    border: 1px solid rgba(255, 140, 0, 0.3);
+    font-family: sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+}
+
+.tickerCategory {
+    font-family: sans-serif;
+    font-size: 0.85rem;
+    color: #94a3b8;
+    letter-spacing: 0.03em;
+}
+
+.tickerBody {
+    min-height: 80px;
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.fadeIn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fadeOut {
+    opacity: 0;
+    transform: translateY(-6px);
+}
+
+.factQuestion {
+    font-family: sans-serif;
+    color: #f8fafc;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.factAnswer {
+    font-family: sans-serif;
+    color: #cbd5e1;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.dotsContainer {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    margin-top: 16px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.activeDot {
+    background-color: #ff8c00;
+    width: 20px;
+    border-radius: 4px;
+}
+
+/* Gallery Interactive Card Style */
+.imageCard {
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.imageCard:hover {
+    transform: translateY(-4px);
+}
+
+/* Modal Backdrop Overlay */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(5, 8, 15, 0.85);
+
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    animation: fadeIn 0.2s ease-out;
+}
+
+/* Modal Wrapper Box */
+.modalContent {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(255, 140, 0, 0.3);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+}
+
+/* Fullscreen High-Res Image */
+.fullSolarImage {
+    max-width: 80vw;
+    max-height: 75vh;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+/* Close Button (top-right of modal) */
+.closeButton {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: transparent;
+    border: none;
+    color: #ff8c00;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.closeButton:hover {
+    color: var(--starlight);
+}
+
+/* Modal Bottom Caption */
+.modalCaption {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.modalCaption h3 {
+    font-family: sans-serif;
+    color: #ff8c00;
+    font-size: 1.2rem;
+    margin: 0 0 4px 0;
+}
+
+.modalCaption p {
+    font-family: sans-serif;
+    color: #94a3b8;
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.modalCaption kbd {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-family: sans-serif;
+    font-size: 0.75rem;
+    color: #f8fafc;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.flaresSection {
+    margin-top: 48px;
+    margin-bottom: 32px;
+    padding: 0 24px;
+}
+
+.flaresGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: stretch;
+}
+
+.flareTelemetryCard {
+    background: rgba(15, 23, 42, 0.4);
+    border: 1px solid rgba(255, 140, 0, 0.25);
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.telemetryHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.telemetryBadge {
+    background-color: rgba(255, 140, 0, 0.15);
+    color: #ff8c00;
+    border: 1px solid rgba(255, 140, 0, 0.3);
+    font-family: sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+}
+
+.liveIndicator {
+    font-family: sans-serif;
+    font-size: 0.75rem;
+    color: #22c55e;
+    letter-spacing: 0.05em;
+}
+
+.telemetryStatus {
+    font-family: sans-serif;
+    color: #94a3b8;
+    font-size: 0.95rem;
+    padding: 20px 0;
+}
+
+.telemetryError {
+    font-family: sans-serif;
+    color: #ef4444;
+    font-size: 0.95rem;
+    padding: 20px 0;
+}
+
+.flareClassContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.flareMetric {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.metricLabel {
+    font-family: sans-serif;
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+.metricValueNormal {
+    font-family: sans-serif;
+    font-size: 1.25rem;
+    color: #38bdf8;
+    font-weight: 600;
+}
+
+.metricValuePeak {
+    font-family: sans-serif;
+    font-size: 1.25rem;
+    color: #ff8c00;
+    font-weight: 600;
+}
+
+.telemetryDescription {
+    font-family: sans-serif;
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .flaresGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.embeddedImageWrapper {
+    margin-top: 1.5rem;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+}
+
+.embeddedImageWrapper:hover {
+    border-color: rgba(255, 165, 0, 0.5);
+}
+
+.solarImage {
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.imageCaption {
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    color: #a0aec0;
+    font-family: sans-serif;
+}
+
+.flaresGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.flareImageCard {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.flareImageCard:hover {
+    border-color: rgba(0, 200, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.galleryStyleImage {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cardInnerLayout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.cardTextContent {
+    flex: 1;
+}
+
+.embeddedRightImageWrapper {
+    width: 280px;
+    height: 280px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.embeddedRightImageWrapper:hover {
+    border-color: rgba(0, 200, 255, 0.4);
+    transform: scale(1.02);
+}
+
+.galleryStyleImage {
+    width: 100%;
+    height: calc(100% - 1.5rem);
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.chartsContainer {
+    margin-top: 2.5rem;
+    width: 100%;
+}
+
+.doubleChartStack {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.chartCard {
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.chartSubTitle {
+    font-size: 1rem;
+    color: #cbd5e1;
+    margin-bottom: 1rem;
+    font-family: sans-serif;
+}
+
+.chartBodyComposed {
+    width: 100%;
+    height: 300px;
+}
+
+.chartBodyRadial {
+    width: 100%;
+    height: 350px;
+}
+
+.chartsContainer {
+    margin-top: 2.5rem;
+    width: 100%;
+}
+
+.sideBySideGrid {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.chartCard {
+    flex: 1;
+    min-width: 0;
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.25rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.chartSubTitle {
+    font-size: 1rem;
+    color: #cbd5e1;
+    margin-bottom: 1rem;
+    font-family: sans-serif;
+}
+
+.chartsContainer {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.sideBySideGrid {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.chartCard {
+    flex: 1;
+    min-width: 0;
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+}
+
+.chartSubTitle {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-family: sans-serif;
+}
+
+.chartBodyComposed,
+.chartBodyRadial {
+    width: 100%;
+    height: 320px;
+}
+
+.sectionWrapper {
+    width: 100%;
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
+
+.sideBySideGrid {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.chartCard {
+    flex: 1;
+    min-width: 0;
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+}
+
+.chartSubTitle {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-family: sans-serif;
+}
+
+.chartBodyComposed,
+.chartBodyRadial {
+    width: 100%;
+    height: 320px;
+}
+
+.sectionWrapper {
+    width: 100%;
+    margin: 2rem 0;
+    box-sizing: border-box;
+}
+
+.sideBySideGrid {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.chartCard {
+    flex: 1;
+    min-width: 0;
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+}
+
+.chartSubTitle {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-family: sans-serif;
+}
+
+.chartBodyComposed,
+.chartBodyRadial {
+    width: 100%;
+    height: 320px;
+}
+
+/* Layout Wrapper for Sections */
+.sectionWrapper {
+    width: 100%;
+    margin: 2rem 0;
+    box-sizing: border-box;
+}
+
+/* Image Cards Top Grid (The Sun Right Now) */
+.imageCard {
+    background: #0c0f17;
+    border: 1px solid #883e0c;
+    /* Golden border matching solar theme */
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+}
+
+/* Main Flare Activity Container */
+.flareContainer {
+    background: #0c0f17;
+    /* Changed from blue to dark greyish-black */
+    border: 1px solid #883e0c;
+    /* Golden border */
+    border-radius: 12px;
+    padding: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Side-by-Side Flex Grid for Charts */
+.sideBySideGrid {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Chart Cards (Composed Metrics & Radial Metrics) */
+.chartCard {
+    flex: 1;
+    min-width: 0;
+    background: #0c0f17;
+    /* Dark greyish-black background */
+    border: 1px solid #883e0c;
+    /* Golden border outline */
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+}
+
+.chartSubTitle {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-family: sans-serif;
+}
+
+.chartBodyComposed,
+.chartBodyRadial {
+    width: 100%;
+    height: 320px;
+}
+
+.solarStage {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sketchfabWrapper {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent !important;
+    box-shadow: none !important;
+
+    /* 1. Clips the outer edges to hide the Sketchfab UI, logo, and bottom bar */
+    clip-path: circle(38% at 50% 50%);
+
+    /* 2. Softly fades the edges of the 3D model canvas into your website background */
+    mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 98%);
+    -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 98%);
+}
+
+.sketchfabIframe {
+    width: 120% !important;
+    /* Scaled slightly up to push Sketchfab watermarks outside the frame */
+    height: 120% !important;
+    border: none !important;
+    background: transparent !important;
+    mix-blend-mode: screen !important;
+    /* Blends Sketchfab's dark canvas directly with your starry background */
+    pointer-events: auto;
+}
+
+/* Container holding the Sun and its overlay stats */
+.sunStageContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 550px;
+}
+
+/* Floating overlay on the right side of the Sun */
+.embeddedSunStats {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    text-align: right;
+    z-index: 15;
+    pointer-events: none;
+    /* Lets clicks pass through to 3D controls if overlapping */
+}
+
+.statOverlayGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.statOverlayLabel {
+    font-family: sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #FF4520;
+    text-transform: uppercase;
+}
+
+.statOverlayValue {
+    font-family: sans-serif;
+    font-size: 0.95rem;
+    color: #ffffff;
+}
+
+.sunspotTableContainer {
+    flex: 1;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.sunspotTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: sans-serif;
+    font-size: 0.85rem;
+}
+
+.sunspotTable th {
+    color: #f39c12;
+    text-align: left;
+    padding: 0.6rem 0.8rem;
+    border-bottom: 1px solid rgba(243, 156, 18, 0.3);
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+
+.sunspotTable td {
+    padding: 0.6rem 0.8rem;
+    color: #cbd5e1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sunspotTable tr:hover {
+    background: rgba(243, 156, 18, 0.05);
+}
+
+.singleContainerCard {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(243, 156, 18, 0.3);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+}
+
+.tableSection {
+    flex: 1.2;
+    width: 100%;
+}
+
+.imageSection {
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imageClickWrapper {
+    cursor: pointer;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.imageClickWrapper:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 15px rgba(243, 156, 18, 0.3);
+}
+
+/* Modal Lightbox Styling */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.modalCard {
+    position: relative;
+    background: #0b1120;
+    border: 1px solid rgba(243, 156, 18, 0.4);
+    border-radius: 12px;
+    padding: 1.5rem;
+    max-width: 600px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+}
+
+.closeButton {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: transparent;
+    border: none;
+    color: #f39c12;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.modalImage {
+    width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.modalCaption {
+    margin-top: 1rem;
+    color: #f39c12;
+    font-family: sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+}
+
+.modalSubtext {
+    color: #94a3b8;
+    font-size: 0.8rem;
+    font-family: sans-serif;
+}
+
+.modalSubtext kbd {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.coronalGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    width: 100%;
+}
+
+.coronalCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imageSubCaption {
+    color: #94a3b8;
+    font-size: 0.75rem;
+    font-family: sans-serif;
+    margin-top: 0.2rem;
+    text-align: center;
+}
+
+/* Container for two metric columns (Current/Peak and Latest/Location) */
+.flareClassContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Individual Metric Styling */
+.flareMetric {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.metricLabel {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    font-family: inherit;
+}
+
+.metricValueNormal {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #38bdf8;
+    font-family: sans-serif;
+}
+
+.metricValuePeak {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #f97316;
+    font-family: sans-serif;
+}
+
+/* Table Container (matches Sunspot Table styling) */
+.sunspotTableContainer {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 0.5rem;
+}
+
+.sunspotTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    text-align: left;
+}
+
+.sunspotTable th {
+    padding: 0.5rem 0.75rem;
+    color: #94a3b8;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-weight: 500;
+}
+
+.sunspotTable td {
+    padding: 0.5rem 0.75rem;
+    color: #e2e8f0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-family: sans-serif;
+}
+
+.filterGroup {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.filterBtn {
+    background: transparent;
+    color: #8a99ad;
+    border: 1px solid #1e2d42;
+    border-radius: 4px;
+    padding: 4px 10px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.activeFilter {
+    background: #00e5ff;
+    color: #0a111e;
+    border-color: #00e5ff;
+}
+
+.featureName {
+    color: #00e5ff;
+    font-weight: bold;
+}
+
+.featureDesc {
+    font-size: 13px;
+    color: #a0aec0;
+}
+
+.timelineContainer {
+    padding: 16px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.timelineDesc {
+    font-size: 13px;
+    color: #a0aec0;
+    margin: 0;
+}
+
+.chartWrapper {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+    background: #0a111e;
+    padding: 15px 10px 5px;
+    border-radius: 6px;
+    border: 1px solid #1e2d42;
+}
+
+.chartBar {
+    flex: 1;
+    border-radius: 2px 2px 0 0;
+    transition: height 0.3s ease;
+    cursor: pointer;
+}
+
+.normalBar {
+    background: linear-gradient(180deg, #00e5ff 0%, #0055ff 100%);
+}
+
+.flareBar {
+    background: #ff4d4d;
+}
+
+.axisLabels {
+    display: flex;
+    justify-content: space-between;
+    color: #718096;
+    font-size: 11px;
+    padding: 0 5px;
+}
+
+.timelineContainer {
+    padding: 10px 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    /* Adds clean spacing between text and chart */
+}
+
+.timelineDesc {
+    font-size: 13px;
+    color: #a0aec0;
+    margin: 0 0 4px 0;
+}
+
+.chartWrapper {
+    width: 100%;
+    height: 220px;
+    background: transparent;
+    /* Removed blue container background */
+    border: none;
+    /* Removed container border */
+    padding: 0;
+}
+
+.diskMapWrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 1px solid #333;
+}
+
+.diskOverlayContainer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.sunspotPin {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #ff4520;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 8px rgba(255, 69, 32, 0.8);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    pointer-events: auto;
+    transition: all 0.2s ease-in-out;
+}
+
+.sunspotPin:hover,
+.activePin {
+    background-color: #ffcc00;
+    box-shadow: 0 0 12px rgba(255, 204, 0, 1);
+    scale: 1.25;
+}
+
+.selectedRow {
+    background-color: rgba(255, 69, 32, 0.15);
+}
+
+.singleContainerCard {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 1.5rem;
+    box-sizing: border-box;
+}
+
+.tableSection {
+    flex: 1.4;
+    width: 100%;
+}
+
+.imageSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.diskMapWrapper {
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 1px solid #333;
+}
+
+.solarImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Top Page Title */
+.pageHeader {
+    width: 100%;
+    padding: 1.5rem 2.5rem 0.5rem;
+    box-sizing: border-box;
+}
+
+.pageTitle {
+    font-family: sans-serif;
+    color: #f39c12;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* Hero Section Grid Layout */
+.heroSection {
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem 2.5rem;
+    box-sizing: border-box;
+}
+
+.leftSidebarContainer {
+    width: 280px;
+    z-index: 10;
+}
+
+.centerSunStage {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Top Right Floating Pop-up Fact Box */
+.rightFactsContainer {
+    width: 320px;
+    z-index: 10;
+}
+
+.popFactCard {
+    border: 1px solid rgba(243, 156, 18, 0.25);
+    border-radius: 12px;
+    padding: 1.25rem;
+    backdrop-filter: blur(8px);
+    background: rgba(12, 10, 15, 0.55);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7);
+}
+
+.factBadge {
+    display: inline-block;
+    background-color: rgba(243, 156, 18, 0.15);
+    color: #f39c12;
+    border: 1px solid rgba(243, 156, 18, 0.4);
+    font-family: sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    margin-bottom: 0.75rem;
+}
+
+.factContent {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.popIn {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.popOut {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.96);
+}
+
+.factQuestion {
+    font-family: sans-serif;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0 0 0.4rem 0;
+}
+
+.factAnswer {
+    font-family: sans-serif;
+    color: #cbd5e1;
+    font-size: 0.825rem;
+    line-height: 1.45;
+    margin: 0;
+}
+
+.mainWrapper {
+    width: 100%;
+    background-color: #050508;
+}
+
+/* Hero Container */
+.fullScreenHero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem 3rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Floating Overlay Header */
+.overlayHeader {
+    position: absolute;
+    top: 5.5rem;
+    left: 3rem;
+    z-index: 20;
+}
+
+.overlayTitle {
+    font-family: sans-serif;
+    color: #ff8c00;
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin: 0;
+    text-transform: uppercase;
+    text-shadow: 0 0 12px rgba(255, 140, 0, 0.4);
+}
+
+/* Top-Right Floating Fun Facts */
+.topRightFacts {
+    position: absolute;
+    top: 5.5rem;
+    right: 3rem;
+    z-index: 20;
+    width: 300px;
+}
+
+/* Balanced 3-Column Hero Layout */
+.heroContentGrid {
+    display: grid;
+    grid-template-columns: 280px 1fr 280px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 4rem;
+    /* Keeps top area clear for Title & Fun Facts */
+    z-index: 10;
+}
+
+/* Left Column - Moved Higher Up */
+.leftColumn {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transform: translateY(-40px);
+    transform: translateX(-20px);
+}
+
+/* Center Column */
+.centerColumn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Right Column - Sun Stats */
+.rightColumn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.sunStatsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: right;
+}
+
+.statItem {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.statLabel {
+    font-family: sans-serif;
+    color: #ff4500;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+}
+
+.statValue {
+    font-family: sans-serif;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.coronalGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.coronalCard:hover {
+    transform: translateY(-4px);
+    border-color: #ff8c00;
+}
+
+.chartCard {
+    background: #0c0f17;
+    border: 1px solid #883e0c;
+    border-radius: 12px;
+    padding: 1.5rem;
+    overflow: hidden;
+    /* Prevents chart svg elements from bleeding outside rounded corners */
+}
+
+.chartBodyComposed {
+    width: 100%;
+    height: 400px;
+}
